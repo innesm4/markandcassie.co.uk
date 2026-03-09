@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark &amp; Cassie - 18 April 2026</title>
+  <meta name="description" content="Mark Innes & Cassie McGunnigle are getting married. Saturday 18th April 2026 at Logie Country House.">
+  <meta property="og:title" content="Mark & Cassie - We're Getting Married!">
+  <meta property="og:description" content="Saturday 18th April 2026 · Logie Country House">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markandcassie.co.uk">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Alpaca easter egg -->
+  <div id="alpaca-easter-egg" class="alpaca-hidden" aria-hidden="true">
+    <svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="alpaca-svg">
+      <ellipse cx="60" cy="30" rx="22" ry="26" stroke="#333" stroke-width="3" fill="#fff"/>
+      <circle cx="52" cy="24" r="3" fill="#333"/>
+      <circle cx="68" cy="24" r="3" fill="#333"/>
+      <path d="M56 34 Q60 38 64 34" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M46 8 Q42 -4 38 6" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M74 8 Q78 -4 82 6" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse cx="60" cy="95" rx="30" ry="45" stroke="#333" stroke-width="3" fill="#fff"/>
+      <line x1="60" y1="56" x2="60" y2="50" stroke="#333" stroke-width="3"/>
+      <path d="M38 130 L38 155" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+      <path d="M52 130 L52 155" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+      <path d="M68 130 L68 155" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+      <path d="M82 130 L82 155" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <!-- Scattered CSS confetti pieces -->
+    <div class="confetti-field" aria-hidden="true">
+      <i class="confetti-piece" style="--x:5%;--y:8%;--r:45deg;--c:#e31b23;--w:12px;--h:5px"></i>
+      <i class="confetti-piece" style="--x:12%;--y:3%;--r:-30deg;--c:#0072bb;--w:8px;--h:8px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:88%;--y:5%;--r:20deg;--c:#f7941d;--w:14px;--h:5px"></i>
+      <i class="confetti-piece" style="--x:92%;--y:12%;--r:-60deg;--c:#9b59b6;--w:6px;--h:6px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:78%;--y:2%;--r:70deg;--c:#2bb54d;--w:10px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:35%;--y:1%;--r:-15deg;--c:#1fb1e6;--w:11px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:60%;--y:6%;--r:50deg;--c:#fcf953;--w:9px;--h:9px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:20%;--y:14%;--r:-40deg;--c:#e31b23;--w:7px;--h:7px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:45%;--y:4%;--r:25deg;--c:#0072bb;--w:13px;--h:5px"></i>
+      <i class="confetti-piece" style="--x:70%;--y:10%;--r:-55deg;--c:#2bb54d;--w:8px;--h:3px"></i>
+      <i class="confetti-piece" style="--x:95%;--y:8%;--r:35deg;--c:#f7941d;--w:6px;--h:6px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:3%;--y:18%;--r:80deg;--c:#9b59b6;--w:10px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:50%;--y:0%;--r:-20deg;--c:#e31b23;--w:8px;--h:3px"></i>
+      <i class="confetti-piece" style="--x:82%;--y:15%;--r:60deg;--c:#1fb1e6;--w:5px;--h:5px;border-radius:50%"></i>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title" data-animate="fade-up">
+          <span class="hero-title-line">We're</span>
+          <span class="hero-title-line">getting</span>
+          <span class="hero-title-line">married!</span>
+        </h1>
+
+        <div class="hero-arrow-wrap" data-animate="fade-up" data-delay="0.35">
+          <img src="assets/arrow.png" alt="" class="hero-arrow" aria-hidden="true">
+        </div>
+
+        <div class="hero-ring" data-animate="fade-up" data-delay="0.15">
+          <img src="assets/ring.svg" alt="Wedding ring" class="ring-icon" id="ring-icon" width="72" height="72">
+        </div>
+
+        <h2 class="hero-names" data-animate="fade-up" data-delay="0.25">Mark Innes &amp; Cassie McGunnigle</h2>
+        <div class="hero-details" data-animate="fade-up" data-delay="0.3">
+          <p class="hero-event">Saturday 18th April 2026</p>
+          <p class="hero-time">Logie Country House</p>
+        </div>
+      </div>
+
+      <div class="hero-right" data-animate="fade-left" data-delay="0.2">
+        <div class="photo-strip">
+          <div class="polaroid polaroid-1">
+            <div class="polaroid-img"><img src="assets/Photo1.png" alt="Mark and Cassie - Saturday 18th April 2026"></div>
+          </div>
+          <div class="polaroid polaroid-2">
+            <div class="polaroid-img"><img src="assets/Photo2.png" alt="Logie Country House"></div>
+          </div>
+          <div class="polaroid polaroid-3">
+            <div class="polaroid-img"><img src="assets/Photo3.png" alt="See you there?"></div>
+          </div>
+          <div class="polaroid polaroid-4">
+            <div class="polaroid-img"><img src="assets/Photo4.png" alt="Stella and Luna"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown-wrapper" data-animate="fade-up" data-delay="0.5">
+      <div id="countdown" class="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-digits" id="countdown-days">
+            <span class="flip-digit">0</span><span class="flip-digit">0</span>
+          </div>
+          <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-digits" id="countdown-hours">
+            <span class="flip-digit">0</span><span class="flip-digit">0</span>
+          </div>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-digits" id="countdown-mins">
+            <span class="flip-digit">0</span><span class="flip-digit">0</span>
+          </div>
+          <span class="countdown-label">Mins</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-digits" id="countdown-secs">
+            <span class="flip-digit">0</span><span class="flip-digit">0</span>
+          </div>
+          <span class="countdown-label">Secs</span>
+        </div>
+      </div>
+      <div id="countdown-done" class="countdown-done" hidden>
+        <p class="countdown-done-text">Today's the day!</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Marquee divider -->
+  <div class="marquee-banner">
+    <div class="marquee-track marquee-track--slow">
+      <span class="marquee-content">18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp;</span><span class="marquee-content">18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp; 18 APRIL 2026 &nbsp;&nbsp;★&nbsp;&nbsp; LOGIE COUNTRY HOUSE &nbsp;&nbsp;★&nbsp;&nbsp; MARK &amp; CASSIE &nbsp;&nbsp;★&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ====== VENUE ====== -->
+  <section class="section confetti-section" id="venue">
+    <canvas id="confetti-rain" class="confetti-rain" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="title-deed" data-animate="fade-up">
+        <div class="deed-inner">
+          <h2 class="deed-title">Logie<br>Country House</h2>
+          <p class="deed-subtitle">Pitcaple, Inverurie, Aberdeenshire AB51 5EE</p>
+          <div class="deed-rule"></div>
+          <dl class="deed-list" id="deed-list">
+            <div class="deed-row"><dt>Arrival</dt><dd class="deed-typewriter">1:00 PM</dd></div>
+            <div class="deed-row"><dt>Ceremony</dt><dd class="deed-typewriter">1:30 PM</dd></div>
+            <div class="deed-row"><dt>Evening Reception</dt><dd class="deed-typewriter">7:30 PM</dd></div>
+            <div class="deed-row"><dt>Bus Home</dt><dd class="deed-typewriter">1:00 AM</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DIRECTIONS ====== -->
+  <section class="section" id="directions">
+    <div class="container">
+      <h2 class="sec-title" data-animate="fade-up">Getting Here</h2>
+      <p class="mono-address" data-animate="fade-up" data-delay="0.08">
+        Two routes in - check the map below before you set off.
+      </p>
+
+      <div class="map-frame" data-animate="fade-up" data-delay="0.15">
+        <img src="assets/map.png" alt="Map showing routes to Logie Country House. Front Drive off A96 (up to 2 tonnes). Rear Road via Whiteford and Pitcaple (all vehicles)." loading="lazy">
+      </div>
+
+      <a href="https://maps.app.goo.gl/cDS825JNYRpbG21z6" target="_blank" rel="noopener" class="btn-maps" id="maps-btn" data-animate="fade-up" data-delay="0.2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Get Directions
+      </a>
+
+    </div>
+    <div class="marquee-banner" data-animate="fade-up" data-delay="0.28">
+      <div class="marquee-track">
+        <span class="marquee-content">DON'T TRUST YOUR SATNAV! The postcode AB51 5EE takes you to the wrong entrance. Use our map or tap Get Directions above. &nbsp;&nbsp;★&nbsp;&nbsp; FREE PARKING ON SITE &nbsp;&nbsp;★&nbsp;&nbsp; DON'T TRUST YOUR SATNAV! The postcode AB51 5EE takes you to the wrong entrance. Use our map or tap Get Directions above. &nbsp;&nbsp;★&nbsp;&nbsp; FREE PARKING ON SITE &nbsp;&nbsp;★&nbsp;&nbsp;</span><span class="marquee-content">DON'T TRUST YOUR SATNAV! The postcode AB51 5EE takes you to the wrong entrance. Use our map or tap Get Directions above. &nbsp;&nbsp;★&nbsp;&nbsp; FREE PARKING ON SITE &nbsp;&nbsp;★&nbsp;&nbsp; DON'T TRUST YOUR SATNAV! The postcode AB51 5EE takes you to the wrong entrance. Use our map or tap Get Directions above. &nbsp;&nbsp;★&nbsp;&nbsp; FREE PARKING ON SITE &nbsp;&nbsp;★&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== ON THE DAY ====== -->
+  <section class="section" id="on-the-day">
+    <div class="container">
+      <div class="day-cards">
+        <div class="stationery-card" data-animate="fade-up">
+          <svg class="stationery-icon" viewBox="0 0 48 48" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="6" width="28" height="36" rx="2"/><line x1="18" y1="16" x2="30" y2="16"/><line x1="18" y1="22" x2="30" y2="22"/><line x1="18" y1="28" x2="26" y2="28"/><path d="M16 36 L22 30 L28 36" stroke-width="2"/></svg>
+          <h2 class="stationery-card-title">Unplugged Ceremony</h2>
+          <p>Put your phones away for the ceremony. Be present with us. Our photographer will capture everything.</p>
+        </div>
+        <div class="stationery-card" data-animate="fade-up" data-delay="0.12">
+          <svg class="stationery-icon" viewBox="0 0 48 48" fill="none" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M18 24 C18 18, 30 18, 30 24"/><path d="M18 24 C18 30, 30 30, 30 24"/><line x1="24" y1="8" x2="24" y2="12"/><line x1="24" y1="36" x2="24" y2="40"/></svg>
+          <h2 class="stationery-card-title">Gifts</h2>
+          <p>Your company is the best gift. If you'd like to contribute to our honeymoon in Greece, we'd be very grateful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONFETTI CANNON ====== -->
+  <section class="section" id="cannon-section">
+    <div class="container" style="text-align:center">
+      <p class="cannon-label" data-animate="fade-up">Do not press this button.</p>
+      <button class="cannon-btn" id="cannon-btn" data-animate="fade-up" data-delay="0.1">
+        <span class="cannon-btn-inner">🎉</span>
+      </button>
+      <p class="cannon-hint" data-animate="fade-up" data-delay="0.2">Hold for chaos.</p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <img src="assets/ring.svg" alt="" class="footer-ring" aria-hidden="true" width="96" height="96">
+
+      <div class="dice-zone" data-animate="fade-up">
+        <div class="dice-scene" id="dice-scene">
+          <div class="die" id="dice-1">
+            <div class="die-face die-1"><span class="dot"></span></div>
+            <div class="die-face die-2"><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-3"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-4"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-5"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-6"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+          <div class="die" id="dice-2">
+            <div class="die-face die-1"><span class="dot"></span></div>
+            <div class="die-face die-2"><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-3"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-4"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-5"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="die-face die-6"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </div>
+        <!-- Doubles message -->
+        <p class="doubles-msg" id="doubles-msg" hidden>DOUBLES! ROLL AGAIN!</p>
+      </div>
+
+      <p class="footer-date">18.04.26</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
