@@ -1,0 +1,675 @@
+/* ============================================
+   HONEYMOON FUND - Mark & Cassie
+   Beach-themed. Mediterranean vibes.
+   ============================================ */
+
+/* ---- Nav ---- */
+.honeymoon-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 14px var(--gutter);
+  background: rgba(245, 242, 236, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(42, 42, 42, 0.06);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ink-light);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.back-link:hover {
+  color: var(--ink);
+  transform: translateX(-3px);
+}
+
+/* ---- Hero ---- */
+.honeymoon-hero {
+  position: relative;
+  padding: 100px var(--gutter) 60px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.honeymoon-flag {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.honeymoon-title {
+  margin-bottom: 16px;
+  font-size: clamp(2.4rem, 7vw, 4.2rem) !important;
+}
+
+.honeymoon-subtitle {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ink-light);
+  margin-bottom: 24px;
+}
+
+.honeymoon-intro {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--ink-light);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---- Hero CTA text + button ---- */
+.honeymoon-hero .activities-cta {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.btn-contribute {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  margin-top: 28px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: var(--border) solid var(--ink);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-contribute:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 6px 0 rgba(0,0,0,0.1);
+}
+.btn-contribute:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---- Monzo QR code (desktop only) ---- */
+.monzo-qr {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.monzo-qr-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+}
+
+.monzo-qr-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.monzo-qr-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .monzo-qr { display: none; }
+}
+
+/* ---- Sun decoration ---- */
+.sun-decoration {
+  position: absolute;
+  top: 20px;
+  right: 6%;
+  width: 180px;
+  height: 180px;
+  animation: sun-float 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sun-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 230, 66, 0.25) 0%, transparent 70%);
+  animation: sun-glow-pulse 3s ease-in-out infinite alternate;
+}
+
+.sun-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe066 0%, #f5c842 40%, #e8861a 100%);
+  box-shadow:
+    0 0 30px rgba(245, 200, 66, 0.5),
+    0 0 60px rgba(245, 200, 66, 0.2),
+    inset 0 -4px 8px rgba(232, 134, 26, 0.3);
+  z-index: 2;
+}
+
+/* Cute face */
+.sun-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 30px;
+}
+
+.sun-eye {
+  position: absolute;
+  top: 6px;
+  width: 6px;
+  height: 8px;
+  background: #a0620a;
+  border-radius: 50%;
+  animation: sun-blink 4s ease-in-out infinite;
+}
+.sun-eye--left { left: 8px; }
+.sun-eye--right { right: 8px; }
+
+.sun-mouth {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 8px;
+  border-bottom: 2.5px solid #a0620a;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Rotating ray ring */
+.sun-ray-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  animation: sun-spin 30s linear infinite;
+  z-index: 1;
+}
+
+.sun-ray {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center 80px;
+  border-radius: 3px;
+}
+
+.sun-ray--long {
+  width: 5px;
+  height: 20px;
+  background: linear-gradient(to top, #f5c842, #ffe066);
+  transform: translateX(-50%) rotate(var(--r));
+}
+
+.sun-ray--short {
+  width: 4px;
+  height: 12px;
+  background: linear-gradient(to top, #f5c842, #ffe066);
+  opacity: 0.7;
+  transform: translateX(-50%) rotate(var(--r));
+}
+
+/* Distribute 12 rays evenly (30deg apart), alternating long/short */
+.sun-ray:nth-child(1)  { --r: 0deg; }
+.sun-ray:nth-child(2)  { --r: 30deg; }
+.sun-ray:nth-child(3)  { --r: 60deg; }
+.sun-ray:nth-child(4)  { --r: 90deg; }
+.sun-ray:nth-child(5)  { --r: 120deg; }
+.sun-ray:nth-child(6)  { --r: 150deg; }
+.sun-ray:nth-child(7)  { --r: 180deg; }
+.sun-ray:nth-child(8)  { --r: 210deg; }
+.sun-ray:nth-child(9)  { --r: 240deg; }
+.sun-ray:nth-child(10) { --r: 270deg; }
+.sun-ray:nth-child(11) { --r: 300deg; }
+.sun-ray:nth-child(12) { --r: 330deg; }
+
+@keyframes sun-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+@keyframes sun-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes sun-glow-pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.3; }
+}
+
+@keyframes sun-blink {
+  0%, 42%, 46%, 100% { transform: scaleY(1); }
+  44% { transform: scaleY(0.1); }
+}
+
+/* ---- Wave divider ---- */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  margin: -1px 0;
+}
+
+.wave-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #d0e8f2;
+}
+
+.wave-divider--flip {
+  transform: scaleY(-1);
+}
+
+.wave-svg--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation: wave-drift 10s linear infinite;
+}
+
+@keyframes wave-drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Blue band between waves */
+#map {
+  background: #d0e8f2;
+}
+
+/* ---- Map ---- */
+.map-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: var(--border) solid var(--ink);
+  padding: 32px 28px 24px;
+  text-align: center;
+  box-shadow: 5px 7px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.map-card:hover {
+  box-shadow: 8px 12px 0 rgba(0, 0, 0, 0.07);
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  border: 2px solid rgba(42, 42, 42, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.crete-map-iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: none;
+  pointer-events: none;
+  margin-bottom: -40px;
+  clip-path: inset(0 0 40px 0);
+}
+
+.map-caption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-faint);
+  margin-top: 16px;
+}
+
+/* Map overlay markers */
+.map-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Hersonissos/Analipsi - north coast (35.33°N, 25.34°E) */
+.map-marker--stella {
+  top: 52%;
+  left: 54%;
+}
+
+/* Chania - northwest coast (35.51°N, 24.03°E) */
+.map-marker--chania {
+  top: 50%;
+  left: 22%;
+}
+
+.map-marker-dot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 2.5px solid var(--white);
+  box-shadow: 0 2px 8px rgba(212, 32, 44, 0.4), 0 0 0 3px rgba(212, 32, 44, 0.15);
+  animation: marker-pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.map-marker-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--white);
+  padding: 3px 8px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+@keyframes marker-pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(212, 32, 44, 0.4), 0 0 0 3px rgba(212, 32, 44, 0.15); }
+  50% { box-shadow: 0 2px 12px rgba(212, 32, 44, 0.6), 0 0 0 6px rgba(212, 32, 44, 0.1); }
+}
+
+/* ---- Activities ---- */
+#activities .container {
+  max-width: 960px;
+}
+
+.activities-intro {
+  font-family: var(--font-body);
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--ink-light);
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 16px;
+}
+
+.activities-cta {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* Activity grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 3vw, 22px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Activity card */
+.activity-card {
+  position: relative;
+  background: var(--white);
+  border: var(--border) solid var(--ink);
+  padding: 40px 28px 36px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ink);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 6px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.activity-card:active {
+  transform: translateY(-1px);
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Colored top stripe (Monopoly property style) */
+.activity-card-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+.activity-card[data-color="red"] .activity-card-stripe { background: var(--red); }
+.activity-card[data-color="blue"] .activity-card-stripe { background: var(--blue); }
+.activity-card[data-color="green"] .activity-card-stripe { background: var(--green); }
+.activity-card[data-color="yellow"] .activity-card-stripe { background: var(--yellow); }
+.activity-card[data-color="orange"] .activity-card-stripe { background: var(--orange); }
+.activity-card[data-color="purple"] .activity-card-stripe { background: var(--purple); }
+.activity-card[data-color="cyan"] .activity-card-stripe { background: var(--cyan); }
+
+.activity-card-icon {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.activity-card-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.activity-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ink-light);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.activity-card-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 2px solid var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover .activity-card-btn {
+  transform: translateY(-2px);
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Thanks ---- */
+.honeymoon-thanks {
+  padding-top: 10px;
+}
+
+.thanks-text {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--ink-light);
+  margin-bottom: 8px;
+}
+
+.thanks-sign {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.02em;
+}
+
+/* ---- Footer adjustments ---- */
+.footer-ring {
+  width: 64px;
+  height: 64px;
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+@media (max-width: 768px) {
+  .honeymoon-hero {
+    padding: 80px var(--gutter) 40px;
+    min-height: auto;
+  }
+
+  .sun-decoration {
+    width: 130px;
+    height: 130px;
+    top: 15px;
+    right: 4%;
+  }
+
+  .sun-core {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sun-ray-ring {
+    width: 115px;
+    height: 115px;
+  }
+
+  .sun-ray { transform-origin: center 57px; }
+  .sun-ray--long { height: 14px; }
+  .sun-ray--short { height: 9px; }
+  .sun-glow { width: 110px; height: 110px; }
+
+  .sun-eye { width: 5px; height: 6px; }
+  .sun-mouth { width: 12px; height: 6px; }
+
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+
+  .crete-map-iframe {
+    height: 260px;
+  }
+
+  .map-card {
+    padding: 24px 16px 20px;
+  }
+
+  .wave-divider {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .honeymoon-hero {
+    padding: 70px var(--gutter) 32px;
+  }
+
+  .honeymoon-flag {
+    font-size: 2.2rem;
+  }
+
+  .sun-decoration {
+    width: 90px;
+    height: 90px;
+    top: 10px;
+    right: 3%;
+  }
+
+  .sun-core {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sun-ray-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sun-ray { transform-origin: center 40px; }
+  .sun-ray--long { height: 10px; width: 3px; }
+  .sun-ray--short { height: 7px; width: 3px; }
+  .sun-glow { width: 80px; height: 80px; }
+
+  .sun-eye { width: 4px; height: 5px; }
+  .sun-face { width: 28px; height: 20px; }
+  .sun-mouth { width: 10px; height: 5px; border-bottom-width: 2px; }
+
+  .activity-card {
+    padding: 32px 20px 28px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .crete-map-iframe {
+    height: 200px;
+  }
+}
+
+/* ===========================================================
+   REDUCED MOTION
+   =========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .wave-svg { animation: none !important; }
+  .sun-decoration { animation: none !important; }
+  .map-pin-pulse { animation: none !important; display: none; }
+}

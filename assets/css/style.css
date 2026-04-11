@@ -154,6 +154,22 @@ strong { font-weight: 600; }
   letter-spacing: 0.01em;
 }
 
+/* Hero CTAs */
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.hero-ctas .btn-honeymoon,
+.hero-ctas .btn-maps {
+  margin: 0;
+  padding: 14px 30px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
 /* DM Mono for the important bits - typewriter punch */
 .hero-details { margin-bottom: 0; }
 .hero-event {
@@ -797,6 +813,35 @@ strong { font-weight: 600; }
   margin: 0 auto;
 }
 
+.btn-honeymoon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  margin-top: 18px;
+  background: var(--cyan);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: var(--border) solid var(--ink);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-honeymoon:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 6px 0 rgba(0,0,0,0.1);
+  color: var(--white);
+}
+.btn-honeymoon:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
 /* ===========================================================
    DICE
    =========================================================== */
@@ -883,6 +928,7 @@ strong { font-weight: 600; }
   .hero-left {
     display: flex; flex-direction: column; align-items: center;
   }
+  .hero-ctas { justify-content: center; }
   .hero-title { font-size: clamp(3rem, 14vw, 4.5rem); }
   .hero-arrow-wrap { display: none; }
   .photo-strip { max-width: 320px; margin: 0 auto; gap: 10px; }

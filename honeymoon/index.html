@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeymoon Fund - Mark &amp; Cassie</title>
+  <meta name="description" content="Help Mark & Cassie have an unforgettable honeymoon in Crete, Greece.">
+  <meta property="og:title" content="Honeymoon Fund - Mark & Cassie">
+  <meta property="og:description" content="We're heading to Crete! Help us make memories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://markandcassie.co.uk/honeymoon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ====== NAV ====== -->
+  <nav class="honeymoon-nav">
+    <a href="/" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Wedding
+    </a>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="honeymoon-hero">
+    <!-- Sun decoration -->
+    <div class="sun-decoration" aria-hidden="true">
+      <div class="sun-glow"></div>
+      <div class="sun-core">
+        <div class="sun-face">
+          <div class="sun-eye sun-eye--left"></div>
+          <div class="sun-eye sun-eye--right"></div>
+          <div class="sun-mouth"></div>
+        </div>
+      </div>
+      <div class="sun-ray-ring">
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+        <div class="sun-ray sun-ray--long"></div>
+        <div class="sun-ray sun-ray--short"></div>
+      </div>
+    </div>
+
+    <!-- Sand-colored confetti -->
+    <div class="confetti-field" aria-hidden="true">
+      <i class="confetti-piece" style="--x:8%;--y:12%;--r:35deg;--c:#e8d5b7;--w:10px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:15%;--y:5%;--r:-20deg;--c:#d4a574;--w:7px;--h:7px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:85%;--y:8%;--r:55deg;--c:#48c9b0;--w:12px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:90%;--y:18%;--r:-45deg;--c:#e8d5b7;--w:6px;--h:6px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:72%;--y:3%;--r:15deg;--c:#87ceeb;--w:9px;--h:3px"></i>
+      <i class="confetti-piece" style="--x:30%;--y:2%;--r:-60deg;--c:#d4a574;--w:11px;--h:4px"></i>
+      <i class="confetti-piece" style="--x:55%;--y:7%;--r:40deg;--c:#48c9b0;--w:8px;--h:8px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:42%;--y:15%;--r:-25deg;--c:#e8d5b7;--w:6px;--h:3px"></i>
+      <i class="confetti-piece" style="--x:65%;--y:12%;--r:70deg;--c:#87ceeb;--w:5px;--h:5px;border-radius:50%"></i>
+      <i class="confetti-piece" style="--x:3%;--y:20%;--r:10deg;--c:#d4a574;--w:8px;--h:3px"></i>
+    </div>
+
+    <div class="container">
+      <p class="honeymoon-flag" data-animate="fade-up">&#127468;&#127479;</p>
+      <h1 class="sec-title honeymoon-title" data-animate="fade-up" data-delay="0.08">Our Honeymoon</h1>
+      <p class="honeymoon-subtitle" data-animate="fade-up" data-delay="0.16">Crete, Greece &mdash; June 2026</p>
+      <p class="honeymoon-intro" data-animate="fade-up" data-delay="0.24">After the wedding celebrations, we're heading to the beautiful island of Crete for sun, sea, and far too much feta cheese.</p>
+      <p class="activities-cta" data-animate="fade-up" data-delay="0.30">Tap below to contribute</p>
+      <a href="https://monzo.me/cassiemcgunnigle?h=iUt7jt&account_type=joint" target="_blank" rel="noopener" class="btn-contribute" data-animate="fade-up" data-delay="0.36">Contribute to Honeymoon Fund</a>
+      <div class="monzo-qr" data-animate="fade-up" data-delay="0.42">
+        <p class="monzo-qr-label">Or scan with your phone</p>
+        <img src="../assets/monzoqr.jpg" alt="Scan to pay via Monzo" class="monzo-qr-img" width="180" height="180">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WAVE DIVIDER ====== -->
+  <div class="wave-divider" aria-hidden="true">
+    <div class="wave-fill"></div>
+    <svg class="wave-svg wave-svg--top" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,50 C180,80 360,10 540,40 C720,70 900,15 1080,45 C1260,75 1380,30 1440,50 L1440,80 L0,80 Z" fill="#d0e8f2"/>
+    </svg>
+  </div>
+
+  <!-- ====== MAP ====== -->
+  <section class="section" id="map">
+    <div class="container">
+      <div class="map-card" data-animate="fade-up">
+        <div class="map-container">
+          <iframe
+            class="crete-map-iframe"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=23.4%2C35.0%2C26.4%2C35.7&layer=mapnik"
+            loading="lazy"
+            title="Map of Crete showing Stella Island and Chania">
+          </iframe>
+          <!-- Map overlay markers -->
+          <div class="map-marker map-marker--stella" title="Hersonissos">
+            <span class="map-marker-dot"></span>
+            <span class="map-marker-label">Hersonissos</span>
+          </div>
+          <div class="map-marker map-marker--chania" title="Chania">
+            <span class="map-marker-dot"></span>
+            <span class="map-marker-label">Chania</span>
+          </div>
+        </div>
+        <p class="map-caption">Crete, Greece</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== WAVE DIVIDER (flipped) ====== -->
+  <div class="wave-divider wave-divider--flip" aria-hidden="true">
+    <div class="wave-fill"></div>
+    <svg class="wave-svg wave-svg--top" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,50 C180,80 360,10 540,40 C720,70 900,15 1080,45 C1260,75 1380,30 1440,50 L1440,80 L0,80 Z" fill="#d0e8f2"/>
+    </svg>
+  </div>
+
+  <!-- ====== THANK YOU ====== -->
+  <section class="section honeymoon-thanks">
+    <div class="container" style="text-align:center">
+      <p class="thanks-text" data-animate="fade-up">Thank you for being part of our story.</p>
+      <p class="thanks-sign" data-animate="fade-up" data-delay="0.1">M &amp; C x</p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <img src="../assets/ring.svg" alt="" class="footer-ring" aria-hidden="true" width="64" height="64">
+      <p class="footer-date">18.04.26</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="honeymoon.js"></script>
+</body>
+</html>
